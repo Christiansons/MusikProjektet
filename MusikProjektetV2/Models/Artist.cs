@@ -17,8 +17,5 @@ namespace MusikProjektetV2.Models
 
 		[JsonPropertyName("description")]
 		public string Description { get; set; }
-
-		[JsonPropertyName("genre")]
-		public virtual Genre Genre { get; set; }
 	}
 }
