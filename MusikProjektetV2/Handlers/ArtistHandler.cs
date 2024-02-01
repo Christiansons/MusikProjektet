@@ -12,5 +12,6 @@ namespace MusikProjektetV2.Handlers
 		
 		//POST /artist lägger till en ny artist
 
+		//GET /artist
 	}
 }
