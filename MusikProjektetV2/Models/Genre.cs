@@ -14,5 +14,8 @@ namespace MusikProjektetV2.Models
 
 		[JsonPropertyName("genreName")]
 		public string GenreName { get; set; }
-	}
+
+        [JsonPropertyName("UserId")]
+		public int UserId { get; set; }
+    }
 }
