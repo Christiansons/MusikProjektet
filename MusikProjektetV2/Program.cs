@@ -22,7 +22,11 @@ namespace MusikProjektetV2
 			app.MapGet("/user/{id}/song", SongHandler.GetAllSongConnectedToUser);
 
 			app.MapPost("/user/{userId}/song/{songId}", UserHandler.ConnectUserToSong);
-			app.Run();
+
+            app.MapGet("/user/{userId}/genre", GenreHandler.GetAllGenresConnectedToPerson);
+            app.MapPost("/genre/", GenreHandler.AddGenre);
+
+            app.Run();
 		}
 	}
 }
