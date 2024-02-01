@@ -23,7 +23,7 @@ namespace MusikProjektetV2.Handlers
 			context = Context;
 		}
 
-		//OPTIONAL När man lägger till en låt, hämta liknande låtar från externt API, fråga om man vill lägga till
+		//OPTIONAL När man lägger till en låt, hämta ldsiknande låtar från externt API, fråga om man vill lägga till
 
 		//POST /song lägger till en ny låt, den ska ha en genre och artist
 		public static IResult AddSong(SongDto song, int artistId, int genreId)
