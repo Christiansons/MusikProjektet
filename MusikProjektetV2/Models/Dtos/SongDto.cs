@@ -8,11 +8,5 @@ namespace MusikProjektetV2.Models.Dtos
 	{
 		[JsonPropertyName("songTitle")]
 		public string SongTitle { get; set; }
-
-		//[JsonPropertyName("genre")]
-		//public Genre Genre { get; set; }
-
-		//[JsonPropertyName("artist")]
-		//public Artist Artist { get; set; }
 	}
 }

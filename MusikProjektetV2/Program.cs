@@ -12,13 +12,14 @@ namespace MusikProjektetV2
 			builder.Services.AddAuthorization();
 			builder.Services.AddEndpointsApiExplorer();
 			string connectionString = builder.Configuration.GetConnectionString("myConnection");
-			builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
+			builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString)); 
 			var app = builder.Build();
 			app.UseHttpsRedirection();
 			app.UseAuthorization();
 
-			app.MapPost("/song", SongHandler.AddSong);
-			app.MapGet("/song", SongHandler.GetAllSongs);
+			app.MapPost("/song/{artistId}/{genreId}", SongHandler.AddSong);
+			
+			app.MapGet("/user/{id}/song", SongHandler.GetAllSongConnectedToUser);
 
 			app.MapPost("/user/{userId}/song/{songId}", UserHandler.ConnectUserToSong);
 			app.Run();
