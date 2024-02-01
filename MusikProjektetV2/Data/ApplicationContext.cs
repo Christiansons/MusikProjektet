@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MusikProjektetV2.Data
 {
-	internal class ApplicationContext : DbContext
+	public class ApplicationContext : DbContext
 	{
 		public DbSet<User> Users { get; set; }
 		public DbSet<Genre> Genres { get; set; }

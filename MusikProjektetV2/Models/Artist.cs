@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusikProjektetV2.Models
 {
-	internal class Artist
+	public class Artist
 	{
 		[JsonPropertyName("id")]
 		public int Id { get; set; }
